@@ -71,7 +71,6 @@ function render() {
     }
     $('tie-note').hidden = !!ask || !order.some(c => String(rank[c.id]).endsWith('='));
     $('redo-row').hidden = !hasPicks;
-    $('chair-set').hidden = !hasPicks;
 
     $('result').hidden = $('steps').hidden = !!ask;
     if (ask) return;

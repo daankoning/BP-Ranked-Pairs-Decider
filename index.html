@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>British Parliamentary Ranked Pairs</title>
     <meta name="description" content="Tool to help British Parliamentary debate chairs decide triangular calls using the ranked pairs method">
+    <link rel="stylesheet" href="style.css">
     <script src="ranked-pairs.js" defer></script>
     <script src="index.js" defer></script>
 </head>
@@ -107,7 +109,7 @@
 
         <div id="ask" hidden>
             <h2>Tied on a margin of <span id="ask-margin"></span></h2>
-            <p>The order of these comparisons changes the result. As chair, pick the one to rank <span id="ask-which"></span>, for example the clearest.</p>
+            <p>The order of these comparisons changes the result. As chair, pick the one to rank <span id="ask-which"></span>.</p>
             <div id="ask-options"></div>
         </div>
         <p id="tie-note" hidden>= tied, but the order between them doesn't change the result</p>
@@ -121,8 +123,6 @@
         </div>
         <details id="steps" hidden>
             <summary>How this was reached</summary>
-            <p>Comparisons are locked in from the top of the sorted list. One that would form a cycle with those already locked is skipped.
-                <span id="chair-set" hidden>Where the order of tied comparisons mattered, the chair set it.</span></p>
             <table><tbody id="steps-body"></tbody></table>
         </details>
     </div>
