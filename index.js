@@ -49,7 +49,7 @@ function render() {
     $('status').hidden = complete;
     $('report').hidden = !complete;
     if (!complete) {
-        $('status').textContent = filled < 6 ? 'Fill in all six comparisons to see the ranking.' : "Give the chair's casting vote to see the ranking.";
+        $('status').textContent = filled < 6 ? 'Fill in all comparisons to see the ranking.' : "Give the chair's casting vote to see the ranking.";
         return;
     }
 
