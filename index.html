@@ -11,122 +11,126 @@
 </head>
 <body>
 
-<h1>Ranked Pairs</h1>
-<div id = "in">
-    <p>Enter the panel's pairwise votes to get the final ranking.</p>
-    <div id="votes" role="group" aria-label="Pairwise votes">
-        <div class="row">
-            <label for="v0a">OG</label>
-            <input id="v0a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OG against OO">
-            <span aria-hidden="true">–</span>
-            <input id="v0b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OO against OG">
-            <label for="v0b">OO</label>
-        </div>
-        <div id="cast0" role="group" aria-label="Chair's casting vote, OG against OO" hidden>
-            Panel tied: chair's casting vote
-            <label><input type="radio" name="cast0" data-cast="0" value="0"> OG</label>
-            <label><input type="radio" name="cast0" data-cast="0" value="1"> OO</label>
-        </div>
+<main>
+    <h1>Ranked Pairs</h1>
+    <div id="in">
+        <p>Enter the panel's pairwise votes to get the final ranking.</p>
+        <div id="votes" role="group" aria-label="Pairwise votes">
+            <div class="row">
+                <label for="v0a">OG</label>
+                <input id="v0a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OG against OO">
+                <span aria-hidden="true">–</span>
+                <input id="v0b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OO against OG">
+                <label for="v0b">OO</label>
+            </div>
+            <div id="cast0" role="group" aria-label="Chair's casting vote, OG against OO" hidden>
+                Panel tied: chair's casting vote
+                <label><input type="radio" name="cast0" data-cast="0" value="0"> OG</label>
+                <label><input type="radio" name="cast0" data-cast="0" value="1"> OO</label>
+            </div>
 
-        <div class="row">
-            <label for="v1a">OG</label>
-            <input id="v1a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OG against CG">
-            <span aria-hidden="true">–</span>
-            <input id="v1b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CG against OG">
-            <label for="v1b">CG</label>
-        </div>
-        <div id="cast1" role="group" aria-label="Chair's casting vote, OG against CG" hidden>
-            Panel tied: chair's casting vote
-            <label><input type="radio" name="cast1" data-cast="1" value="0"> OG</label>
-            <label><input type="radio" name="cast1" data-cast="1" value="2"> CG</label>
-        </div>
+            <div class="row">
+                <label for="v1a">OG</label>
+                <input id="v1a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OG against CG">
+                <span aria-hidden="true">–</span>
+                <input id="v1b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CG against OG">
+                <label for="v1b">CG</label>
+            </div>
+            <div id="cast1" role="group" aria-label="Chair's casting vote, OG against CG" hidden>
+                Panel tied: chair's casting vote
+                <label><input type="radio" name="cast1" data-cast="1" value="0"> OG</label>
+                <label><input type="radio" name="cast1" data-cast="1" value="2"> CG</label>
+            </div>
 
-        <div class="row">
-            <label for="v2a">OG</label>
-            <input id="v2a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OG against CO">
-            <span aria-hidden="true">–</span>
-            <input id="v2b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CO against OG">
-            <label for="v2b">CO</label>
-        </div>
-        <div id="cast2" role="group" aria-label="Chair's casting vote, OG against CO" hidden>
-            Panel tied: chair's casting vote
-            <label><input type="radio" name="cast2" data-cast="2" value="0"> OG</label>
-            <label><input type="radio" name="cast2" data-cast="2" value="3"> CO</label>
-        </div>
+            <div class="row">
+                <label for="v2a">OG</label>
+                <input id="v2a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OG against CO">
+                <span aria-hidden="true">–</span>
+                <input id="v2b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CO against OG">
+                <label for="v2b">CO</label>
+            </div>
+            <div id="cast2" role="group" aria-label="Chair's casting vote, OG against CO" hidden>
+                Panel tied: chair's casting vote
+                <label><input type="radio" name="cast2" data-cast="2" value="0"> OG</label>
+                <label><input type="radio" name="cast2" data-cast="2" value="3"> CO</label>
+            </div>
 
-        <div class="row">
-            <label for="v3a">OO</label>
-            <input id="v3a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OO against CG">
-            <span aria-hidden="true">–</span>
-            <input id="v3b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CG against OO">
-            <label for="v3b">CG</label>
-        </div>
-        <div id="cast3" role="group" aria-label="Chair's casting vote, OO against CG" hidden>
-            Panel tied: chair's casting vote
-            <label><input type="radio" name="cast3" data-cast="3" value="1"> OO</label>
-            <label><input type="radio" name="cast3" data-cast="3" value="2"> CG</label>
-        </div>
+            <div class="row">
+                <label for="v3a">OO</label>
+                <input id="v3a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OO against CG">
+                <span aria-hidden="true">–</span>
+                <input id="v3b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CG against OO">
+                <label for="v3b">CG</label>
+            </div>
+            <div id="cast3" role="group" aria-label="Chair's casting vote, OO against CG" hidden>
+                Panel tied: chair's casting vote
+                <label><input type="radio" name="cast3" data-cast="3" value="1"> OO</label>
+                <label><input type="radio" name="cast3" data-cast="3" value="2"> CG</label>
+            </div>
 
-        <div class="row">
-            <label for="v4a">OO</label>
-            <input id="v4a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OO against CO">
-            <span aria-hidden="true">–</span>
-            <input id="v4b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CO against OO">
-            <label for="v4b">CO</label>
-        </div>
-        <div id="cast4" role="group" aria-label="Chair's casting vote, OO against CO" hidden>
-            Panel tied: chair's casting vote
-            <label><input type="radio" name="cast4" data-cast="4" value="1"> OO</label>
-            <label><input type="radio" name="cast4" data-cast="4" value="3"> CO</label>
-        </div>
+            <div class="row">
+                <label for="v4a">OO</label>
+                <input id="v4a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for OO against CO">
+                <span aria-hidden="true">–</span>
+                <input id="v4b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CO against OO">
+                <label for="v4b">CO</label>
+            </div>
+            <div id="cast4" role="group" aria-label="Chair's casting vote, OO against CO" hidden>
+                Panel tied: chair's casting vote
+                <label><input type="radio" name="cast4" data-cast="4" value="1"> OO</label>
+                <label><input type="radio" name="cast4" data-cast="4" value="3"> CO</label>
+            </div>
 
-        <div class="row">
-            <label for="v5a">CG</label>
-            <input id="v5a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CG against CO">
-            <span aria-hidden="true">–</span>
-            <input id="v5b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CO against CG">
-            <label for="v5b">CO</label>
+            <div class="row">
+                <label for="v5a">CG</label>
+                <input id="v5a" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CG against CO">
+                <span aria-hidden="true">–</span>
+                <input id="v5b" inputmode="numeric" maxlength="2" autocomplete="off" aria-label="Votes for CO against CG">
+                <label for="v5b">CO</label>
+            </div>
+            <div id="cast5" role="group" aria-label="Chair's casting vote, CG against CO" hidden>
+                Panel tied: chair's casting vote
+                <label><input type="radio" name="cast5" data-cast="5" value="2"> CG</label>
+                <label><input type="radio" name="cast5" data-cast="5" value="3"> CO</label>
+            </div>
         </div>
-        <div id="cast5" role="group" aria-label="Chair's casting vote, CG against CO" hidden>
-            Panel tied: chair's casting vote
-            <label><input type="radio" name="cast5" data-cast="5" value="2"> CG</label>
-            <label><input type="radio" name="cast5" data-cast="5" value="3"> CO</label>
+        <p id="warn" hidden>Check the counts: the comparisons don't all add up to the same number of judges.</p>
+        <button type="button" id="clear">Clear</button>
+    </div>
+
+    <div id="out">
+        <p id="status"></p>
+
+        <div id="report" hidden>
+            <h2>Sorted by margin</h2>
+            <table>
+                <thead><tr><th>Rank</th><th>Comparison</th><th>Votes</th><th>Margin</th></tr></thead>
+                <tbody id="order"></tbody>
+            </table>
+
+            <div id="ask" hidden>
+                <h2>Tied on a margin of <span id="ask-margin"></span></h2>
+                <p>The order of these comparisons changes the result. As chair, pick the one to rank <span id="ask-which"></span>.</p>
+                <div id="ask-options"></div>
+            </div>
+            <p id="tie-note" hidden>= tied, but the order between them doesn't change the result</p>
+            <p id="redo-row" hidden><button type="button" id="redo">Redo tiebreaks</button></p>
+
+            <div id="result" tabindex="-1" hidden>
+                <h2>Result</h2>
+                <ol id="final"></ol>
+                <div id="skipped"></div>
+                <p id="no-cycle">No cycle: every comparison stands.</p>
+            </div>
+            <details id="steps" hidden>
+                <summary>How this was reached</summary>
+                <table><tbody id="steps-body"></tbody></table>
+            </details>
         </div>
     </div>
-    <p id="warn" hidden>Check the counts: the comparisons don't all add up to the same number of judges.</p>
-    <button type="button" id="clear">Clear</button>
-</div>
-
-<div id="out">
-    <p id="status"></p>
-
-    <div id="report" hidden>
-        <h2>Sorted by margin</h2>
-        <table>
-            <thead><tr><th>Rank</th><th>Comparison</th><th>Votes</th><th>Margin</th></tr></thead>
-            <tbody id="order"></tbody>
-        </table>
-
-        <div id="ask" hidden>
-            <h2>Tied on a margin of <span id="ask-margin"></span></h2>
-            <p>The order of these comparisons changes the result. As chair, pick the one to rank <span id="ask-which"></span>.</p>
-            <div id="ask-options"></div>
-        </div>
-        <p id="tie-note" hidden>= tied, but the order between them doesn't change the result</p>
-        <p id="redo-row" hidden><button type="button" id="redo">Redo tiebreaks</button></p>
-
-        <div id="result" tabindex="-1" hidden>
-            <h2>Result</h2>
-            <ol id="final"></ol>
-            <div id="skipped"></div>
-            <p id="no-cycle">No cycle: every comparison stands.</p>
-        </div>
-        <details id="steps" hidden>
-            <summary>How this was reached</summary>
-            <table><tbody id="steps-body"></tbody></table>
-        </details>
-    </div>
-</div>
-
+</main>
+<footer>
+    <small>© 2026 Daan Olivier Koning</small>
+</footer>
 </body>
 </html>

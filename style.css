@@ -98,3 +98,9 @@ th, td {
 summary {
     cursor: pointer;
 }
+
+footer {
+    margin-top: 3rem;
+    text-align: center;
+    opacity: .7;
+}
