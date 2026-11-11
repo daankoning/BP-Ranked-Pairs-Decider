@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Ranked Pairs in British Parliamentary Debating</title>
+    <meta name="description" content="How the ranked pairs method in section 3.2 of the WUDC Judging Manual works, and how to use this tool to decide triangular calls.">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+    <h1>About</h1>
+    <p>
+        In cases where, due to splits, the panel is unable to resolve to a single ranking of teams, the manual requires chairs to use the <em>ranked pairs</em> algorithm to decide the debate.<a href="#fn1" id="fnref1" class="footnote-ref"><sup>1</sup></a>
+        In practice, it appears knowledge of this system is limited.
+        Even for chairs aware of the algorithm, applying it by hand during a time-constrained deliberation is slow and error-prone: a single misordered comparison can change the result.
+        This tool handles the bookkeeping, leaving the chair only the decisions the manual reserves for them.
+    </p>
+
+    <h2>Ranked Pairs</h2>
+    <p>
+        The ranked pairs algorithm for BP is outlined in section 3.2 of the Judging Manual and is a special case of the more general Tideman method.<a href="#fn2" id="fnref2" class="footnote-ref"><sup>2</sup></a>
+        After calling a vote on each pairwise comparison,
+        each of the six comparisons is sorted by the margin (the number of judges in the majority minus those in the minority).
+        In the likely event that this ranking has ties, the chair resolves them by ranking the tied comparisons using their judgement.
+    </p>
+    <p>
+        The resulting list of comparisons is then iterated on.
+        The highest-sorted comparison is fixed and the method proceeds to the next-highest comparison: if it contradicts any previously fixed comparisons, it is discarded, otherwise, it is also fixed.
+        This repeats until a complete ranking is obtained.
+    </p>
+
+    <h2>Using This Tool</h2>
+    <p>
+        Enter the panel’s votes on each of the six pairwise comparisons.
+        Where the panel is split evenly on a comparison, the tool asks for the chair’s casting vote.
+        If the comparisons do not all add up to the same number of judges, a warning is shown, as this usually indicates a typo.
+    </p>
+    <p>
+        Once all six comparisons are in, they are sorted by margin.
+        Ties in margin are common, but their order only matters if it changes which comparisons are discarded.
+        The tool works out which ties affect the outcome and asks the chair to break only those; the rest are left tied and marked with =.
+        <em>Redo tiebreaks</em> undoes these choices.
+    </p>
+    <p>
+        The result gives the final ranking of teams, along with any votes that were discarded.
+        The full sequence of fixed and discarded comparisons is shown under <em>How this was reached</em>, which may be useful when explaining the call to the panel.
+    </p>
+
+    <ol class="footnotes">
+        <li id="fn1">
+            Africa, D. D., Caito, M., Vasic, M., Acolatse, R. S., Cravaris, C. M., Hadome, J., Khandaker, S. A., Shreder, A., Su, D., &amp; Toomey, M. (2025). World Universities Debating Championships Manual. Zenodo.
+            <a href="https://doi.org/10.5281/zenodo.17373296">https://doi.org/10.5281/zenodo.17373296</a>&nbsp;<a href="#fnref1" class="footnote-back" aria-label="Back to text">↩︎</a>
+        </li>
+        <li id="fn2">
+            Tideman, T.N. Independence of clones as a criterion for voting rules. <em>Soc Choice Welfare</em> 4, 185–206 (1987).
+            <a href="https://doi.org/10.1007/BF00433944">https://doi.org/10.1007/BF00433944</a>&nbsp;<a href="#fnref2" class="footnote-back" aria-label="Back to text">↩︎</a>
+        </li>
+    </ol>
+</main>
+<footer>
+    <small>
+        <a href="./">Home</a> · <a href="https://github.com/daankoning/BP-Ranked-Pairs-Decider">Source code</a><br>
+        © 2026 Daan Olivier Koning
+    </small>
+    <a href="https://debatbond.nl/en"><img src="logo.png" alt="Nederlandse Debatbond" width="48" height="48"></a>
+</footer>
+</body>
+</html>
