@@ -1,0 +1,2 @@
+# BP Ranked Pairs Decider
+Tool to help chairs decide triangular calls using the ranked pairs method as required by section 3.2 of the [WUDC Judging Manual](https://drive.google.com/file/d/1IvBju1RDN1WH_lK-8DxSsVFQuEurq0pN/view?usp=drive_link).
