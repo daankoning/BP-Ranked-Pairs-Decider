@@ -1,7 +1,28 @@
+/* Nederlandse Debatbond house style (colours and type as in ndb.cls). */
 :root {
+    --orange: #F16F21;
+    --tint: #F16F2122;
+    --text: #000;
+    --grey2: #666;
+    --line: #8884;
+    --warn: #d33;
+    --bg: #fff;
+
     color-scheme: light dark;
-    font-family: system-ui, sans-serif;
+    accent-color: var(--orange);
+    font-family: Candara, Carlito, system-ui, sans-serif;
     line-height: 1.5;
+    color: var(--text);
+    background: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #ddd;
+        --grey2: #aaa;
+        --warn: #f66;
+        --bg: #242424;
+    }
 }
 
 body {
@@ -10,18 +31,49 @@ body {
     padding: 0 1rem;
 }
 
+h1, h2 {
+    color: var(--orange);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin: 0;
+}
+
 h2 {
-    font-size: 1.1rem;
-    margin-top: 2rem;
+    font-size: 1.6rem;
+    margin: 2rem 0 .5rem;
+}
+
+.subtitle {
+    color: var(--grey2);
+    font-size: 1.2rem;
+    line-height: 1.35;
+    margin: .25rem 0 1.5rem;
 }
 
 button, input {
     font: inherit;
+    color: inherit;
 }
 
 button {
-    padding: .25rem .75rem;
+    padding: .25rem .9rem;
+    border: 1px solid var(--orange);
+    border-radius: 4px;
+    background: transparent;
     cursor: pointer;
+}
+
+button:hover {
+    background: var(--tint);
+}
+
+button:focus-visible, .row input:focus {
+    outline: 2px solid var(--orange);
+    outline-offset: 1px;
 }
 
 .row {
@@ -44,6 +96,13 @@ button {
     width: 2.5rem;
     padding: .2rem;
     text-align: center;
+    border: 1px solid var(--grey2);
+    border-radius: 4px;
+    background: transparent;
+}
+
+.row input:focus {
+    border-color: var(--orange);
 }
 
 [id^="cast"] {
@@ -54,22 +113,15 @@ button {
 
 #clear {
     display: block;
-    margin: 0 auto;
+    margin: 1rem auto 0;
 }
 
 #warn {
-    color: #d33;
+    color: var(--warn);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        background: #242424;
-        color: #ddd;
-    }
-
-    #warn {
-        color: #f66;
-    }
+#status, #tie-note {
+    color: var(--grey2);
 }
 
 #out {
@@ -84,7 +136,12 @@ table {
 th, td {
     padding: .3rem .5rem;
     text-align: left;
-    border-bottom: 1px solid #8884;
+    border-bottom: 1px solid var(--line);
+}
+
+th {
+    color: var(--grey2);
+    font-weight: normal;
 }
 
 #ask-options button {
@@ -95,12 +152,24 @@ th, td {
     font-size: 1.25rem;
 }
 
+#final li::marker, summary::marker {
+    color: var(--orange);
+}
+
 summary {
     cursor: pointer;
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     margin-top: 3rem;
-    text-align: center;
-    opacity: .7;
+    color: var(--grey2);
+}
+
+footer img {
+    display: block;
+    width: 3rem;
+    height: 3rem;
 }
