@@ -61,6 +61,17 @@ button {
     color: #d33;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        background: #242424;
+        color: #ddd;
+    }
+
+    #warn {
+        color: #f66;
+    }
+}
+
 #out {
     margin-top: 2rem;
 }
