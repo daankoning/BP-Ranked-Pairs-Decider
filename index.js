@@ -76,7 +76,7 @@ function render() {
     if (ask) return;
 
     const skipped = steps.filter(s => s.clash);
-    $('final').replaceChildren(...final.map(t => el('li', TEAMS[t])));
+    $('final').replaceChildren(...final.flatMap((t, i) => i ? [el('span', ' > '), TEAMS[t]] : [TEAMS[t]]));
     $('skipped').replaceChildren(...skipped.map(s =>
         el('p', `The ${s.c.hi}–${s.c.lo} ${s.c.margin ? '' : 'casting '}vote for ${TEAMS[s.c.win]} over ${TEAMS[s.c.lose]} is ignored.`)));
     $('no-cycle').hidden = skipped.length > 0;

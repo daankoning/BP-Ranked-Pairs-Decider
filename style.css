@@ -152,7 +152,7 @@ th {
     font-size: 1.25rem;
 }
 
-#final li::marker, summary::marker {
+#final span, summary::marker {
     color: var(--orange);
 }
 
